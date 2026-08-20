@@ -360,6 +360,11 @@ body{font-family:'Pretendard','Noto Sans KR',sans-serif;background:var(--bg);col
 .a-purple{background:#ede9fe;color:#7c3aed;}
 .tc.b-purple::before{background:linear-gradient(90deg,#8b5cf6,#7c3aed);}
 .sc.b-purple:hover{border-color:#c4b5fd;}
+.i-fuchsia{background:#fdf4ff;}.i-fuchsia svg{stroke:#a21caf;}
+.t-fuchsia{background:#fdf4ff;color:#86198f;border:1px solid #f0abfc;}
+.a-fuchsia{background:#fdf4ff;color:#a21caf;}
+.tc.b-fuchsia::before{background:linear-gradient(90deg,#d946ef,#a21caf);}
+.sc.b-fuchsia:hover{border-color:#f0abfc;}
 
 /* ── IFRAME ── */
 #fv{display:none;position:fixed;inset:0;z-index:100;flex-direction:column;}
@@ -742,7 +747,7 @@ body{font-family:'Pretendard','Noto Sans KR',sans-serif;background:var(--bg);col
           <p>원하시는 메뉴를 선택하여 업무를 시작하세요.</p>
         </div>
         <div class="greeting-stats">
-          <div class="gstat"><div class="gstat-num">16</div><div class="gstat-label">도구</div></div>
+          <div class="gstat"><div class="gstat-num">17</div><div class="gstat-label">도구</div></div>
           <div class="gstat"><div class="gstat-num" id="gstat-sched">0</div><div class="gstat-label">이번달 일정</div></div>
           <div class="gstat gstat-today-wrap" style="cursor:default;" onmouseenter="showTodayTooltip(event)" onmouseleave="hideTodayTooltip()"><div class="gstat-num" id="gstat-today">0</div><div class="gstat-label">오늘 일정</div>
           </div>
@@ -786,7 +791,7 @@ body{font-family:'Pretendard','Noto Sans KR',sans-serif;background:var(--bg);col
       </div>
 
       <div class="sec-header">
-        <div class="sec-title">업무 도구 <span class="badge">11</span></div>
+        <div class="sec-title">업무 도구 <span class="badge">12</span></div>
       </div>
       <div class="small-cards">
         <div class="sc b-teal" onclick="openTool('https://sk-stoa-qa-archive.netlify.app/','SK스토아 QA 아카이브','teal')">
@@ -843,6 +848,11 @@ body{font-family:'Pretendard','Noto Sans KR',sans-serif;background:var(--bg);col
           <div class="sc-icon i-purple"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
           <div class="sc-body"><div class="sc-title">해외/국내 리콜 제품 정보 조회</div><div class="sc-desc">국가기술표준원·한국제품안전협회 리콜 정보 조회</div></div>
           <span class="sc-arr a-purple"><svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></span>
+        </div>
+        <div class="sc b-fuchsia" onclick="openExternal('https://video-magician-production.up.railway.app/')">
+          <div class="sc-icon i-fuchsia"><svg viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
+          <div class="sc-body"><div class="sc-title">발화 금칙어 검수 시스템</div><div class="sc-desc">카테고리별 발화 금칙어 자동 검수·관리</div></div>
+          <span class="sc-arr a-fuchsia"><svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></span>
         </div>
       </div>
     </div><!-- /view-home -->
@@ -1177,7 +1187,8 @@ const TOOLS=[
   {url:'https://qa-test-report-production.up.railway.app/',title:'자체 시험성적서 발행 시스템',desc:'시험성적서를 발행하고 이력을 관리합니다.',tag:'성적서',color:'lime',external:true},
   {url:'https://qa-partner-total-evaluation.netlify.app/',title:'협력사 QA 종합 Grading',desc:'협력사의 QA 항목을 종합 평가하고 등급을 산출합니다.',tag:'협력사 평가',color:'emerald',external:true},
   {url:'https://label-check-production-7732.up.railway.app/',title:'라벨 검수 시스템',desc:'상품 라벨의 표시사항 누락·오기를 자동으로 검수하고 결과를 관리합니다.',tag:'라벨 검수',color:'rose',external:true},
-  {url:'https://recall-info.onrender.com/',title:'해외/국내 리콜 제품 정보 조회',desc:'국가기술표준원·한국제품안전협회 기준 해외·국내 리콜 제품 정보를 조회합니다.',tag:'리콜정보',color:'purple',external:true}
+  {url:'https://recall-info.onrender.com/',title:'해외/국내 리콜 제품 정보 조회',desc:'국가기술표준원·한국제품안전협회 기준 해외·국내 리콜 제품 정보를 조회합니다.',tag:'리콜정보',color:'purple',external:true},
+  {url:'https://video-magician-production.up.railway.app/',title:'상품 카테고리별 발화 금칙어 검수 시스템',desc:'상품 카테고리별 발화 금칙어를 자동으로 검수하고 위반 표현을 관리합니다.',tag:'금칙어 검수',color:'fuchsia',external:true}
 ];
 const SVGS={
   blue:'<svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M9 2v4M15 2v4M8 10h8M8 14h5"/></svg>',
@@ -1195,7 +1206,8 @@ const SVGS={
   lime:'<svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><path d="M9 13h6M9 17h4"/></svg>',
   emerald:'<svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>',
   rose:'<svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>',
-  purple:'<svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>'
+  purple:'<svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>',
+  fuchsia:'<svg viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>'
 };
 
 // ═══════════════════════════════════════
@@ -1221,7 +1233,7 @@ function switchView(v){
 const COLOR_HEX = {
   blue:'#2563eb',amber:'#d97706',green:'#16a34a',cyan:'#0891b2',slate:'#475569',
   teal:'#0d9488',red:'#dc2626',violet:'#7c3aed',pink:'#be185d',indigo:'#4338ca',
-  sky:'#0369a1',orange:'#ea580c',lime:'#65a30d',emerald:'#059669',rose:'#e11d48',purple:'#7c3aed'
+  sky:'#0369a1',orange:'#ea580c',lime:'#65a30d',emerald:'#059669',rose:'#e11d48',purple:'#7c3aed',fuchsia:'#a21caf'
 };
 
 // 도구별 사용 안내 데이터
@@ -1360,6 +1372,15 @@ const GUIDE_DATA = [
       {label:'결과 활용',detail:'조회된 리콜 정보를 품질 관리 및 납품 검토 자료로 활용합니다.'}
     ],
     tips:['리콜 여부는 납품 전 반드시 확인하세요.','정기적으로 주요 취급 제품의 리콜 현황을 모니터링하세요.']
+  },
+  { steps:[
+      {label:'카테고리 선택',detail:'검수할 상품의 카테고리를 선택합니다.'},
+      {label:'발화 문구 입력',detail:'검수할 상품 발화 문구 또는 스크립트를 입력합니다.'},
+      {label:'자동 검수 실행',detail:'카테고리별 금칙어 기준으로 위반 표현이 자동으로 감지됩니다.'},
+      {label:'결과 확인',detail:'위반 금칙어 항목과 위치가 하이라이트로 표시됩니다.'},
+      {label:'결과 저장·수정 요청',detail:'검수 결과를 저장하고 담당 MD·방송팀에 수정 요청을 전달합니다.'}
+    ],
+    tips:['카테고리별 금칙어 기준이 다르므로 반드시 카테고리를 정확히 선택하세요.','방송 전 최종 스크립트를 필수적으로 검수하세요.']
   }
 ];
 
